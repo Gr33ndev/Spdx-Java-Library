@@ -74,7 +74,7 @@ public class TestLicenseTemplateRule {
 	public void testparseLicenseTemplateRule() throws LicenseTemplateRuleException {
 		LicenseTemplateRule rule = new LicenseTemplateRule("Name", RuleType.BEGIN_OPTIONAL, "original", "match", "example");
 
-		logger.error("LOGGER TEST - 47110815");
+		logger.error("LOGGER TEST - 47110815abc");
 
 		rule.parseLicenseTemplateRule(PARSEABLE_RULE);
 		assertEquals(rule.getExample(), RULE_EXAMPLE);
