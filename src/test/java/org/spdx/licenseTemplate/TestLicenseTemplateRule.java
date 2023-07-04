@@ -68,7 +68,7 @@ public class TestLicenseTemplateRule {
 	public void tearDown() throws Exception {
 	}
 
-	private static Logger logger = LoggerFactory.getLogger(SLF4J.class);
+	private static Logger logger = LoggerFactory.getLogger(TestLicenseTemplateRule.class);
 
 	@Test
 	public void testparseLicenseTemplateRule() throws LicenseTemplateRuleException {
