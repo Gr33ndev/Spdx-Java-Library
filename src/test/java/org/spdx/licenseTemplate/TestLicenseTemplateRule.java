@@ -25,6 +25,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.spdx.licenseTemplate.LicenseTemplateRule.RuleType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Source Auditor
@@ -66,9 +68,14 @@ public class TestLicenseTemplateRule {
 	public void tearDown() throws Exception {
 	}
 
+	public static logger = LoggerFactory.getLogger(TestLicenseTemplateRule.class);
+
 	@Test
 	public void testparseLicenseTemplateRule() throws LicenseTemplateRuleException {
 		LicenseTemplateRule rule = new LicenseTemplateRule("Name", RuleType.BEGIN_OPTIONAL, "original", "match", "example");
+
+		logger.error("LOGGER TEST - 47110815");
+
 		rule.parseLicenseTemplateRule(PARSEABLE_RULE);
 		assertEquals(rule.getExample(), RULE_EXAMPLE);
 		assertEquals(rule.getName(), RULE_NAME);
